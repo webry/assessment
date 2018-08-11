@@ -1,0 +1,337 @@
+@charset "utf-8";
+/* 共通部分 */
+
+* {
+	box-sizing:border-box;
+}
+html {
+	font-size:12px;
+}
+body {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color:#333;
+	margin:0;
+	text-align:justify;
+}
+#container {
+	margin:0 auto;
+	padding:0 15px;
+	position:relative;
+	overflow:hidden;
+}
+#header h1 {
+	margin:0;
+	padding:0.5em 0;
+}
+img {
+	max-width:100%;
+	height:auto;
+}
+strong {
+	font-weight:normal;
+	text-decoration:underline;
+}
+dd, figure {
+	margin:0;
+}
+.clearfix::after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.underline {
+	padding-bottom:.5em;
+	border-bottom:solid 2px #333;
+	font-weight:bold;
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+a img {
+	border:none;
+}
+nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+nav ul li a {
+	font-size:1.2rem;
+	letter-spacing:.2em;
+	font-weight:bold;
+}
+nav ul li a:hover {
+	border-bottom:solid 2px #F90;
+}
+nav ul li:last-child {
+	border:none;
+}
+#top nav ul li:first-child a, #about nav ul li:nth-child(2) a, #recipe nav ul li:nth-child(3) a, #blog nav ul li:nth-child(4) a {
+	border-bottom:solid 2px #F90;
+}
+article h1 {
+	background-image:url(../images/bg_h1.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	padding-left:30px;
+}
+article h1 span {
+	font-size:1rem;
+	letter-spacing:.5em;
+	padding-left:1em;
+}
+article h2 {
+	font-size:1.1rem;
+	padding-bottom:.5em;
+	border-bottom:double 3px #666;
+}
+artcle p {
+	margin-top:0;
+}
+.recipe figure {
+	text-align:center;
+}
+.recipe figure img {
+	border:solid 2px #eee;
+	border-radius:6px;
+	box-shadow:2px 2px 4px #ccc;
+}
+#more_recipe {
+	border:dotted 1px #666;
+	padding:1em;
+	border-radius:4px;
+	margin-top:1em;
+}
+#more_recipe h2 {
+	margin:0;
+	background-image:url(../images/bg_dot.png);
+	background-repeat:no-repeat;
+	padding:8px 0 10px 3em;
+	font-size:1.1rem;
+}
+#sidebar input[type="text"], #sidebar input[type="mail"] {
+	width:100%;
+	max-width:24em;
+	margin-bottom:.5em;
+}
+#sidebar .submit {
+	border:none;
+	width:80px;
+	background-color:#333;
+	color:#fff;
+}
+#sidebar dl div {
+	margin-bottom:10px;
+}
+#footer {
+	border-top:double 3px #666;
+	text-align:center;
+	padding:1em 0;
+	margin-top:15px;
+	clear:both;
+}
+#mail {
+	display:none;
+}
+#nav_tab {
+	display:none;
+}
+ @media (max-width:767px) {
+#header h1 img {
+	max-width:70%;
+}
+#nav_btn {
+	display:block;
+	width:40px;
+	height:40px;
+	background-image:url(../svg/nav_button_open.svg);
+	position:absolute;
+	top:15px;
+	right:15px;
+	z-index:1;
+}
+#nav_tab:checked+label>#nav_btn {
+	background-image:url(../svg/nav_button_close.svg);
+}
+#nav {
+	background-color:rgba(255,255,255,.8);
+	position:absolute;
+	width:100vw;
+	height:100vh;
+	top:0;
+	transform:translateX(100vw);
+	padding-left:1em;
+	padding-top:.5em;
+	border:solid 2px rgba(51,51,51,.5);
+	border-bottom-left-radius:8px;
+	transition:.5s;
+}
+#nav_btn:hover {
+	cursor:pointer;
+}
+#nav_tab:checked~#nav {
+ transform:translateX(30vw);
+}
+#nav a {
+	font-size:2rem;
+}
+
+}
+
+/* ここから、width:576px　以上に適用 */
+
+ @media (min-width:576px) {
+#pasta .flex>p {
+	width:66%;
+	float:left;
+	padding:0 15px 0 0;
+	margin-top:0;
+}
+.recipe figure {
+	float:right;
+	width:34%;
+}
+.recipe figure img {
+	border:solid 2px #aaa;
+	padding:5px;
+	border-radius:6px;
+}
+.recipe figcaption {
+	font-size:0.875rem;
+}
+.recipe h3 {
+	font-size:1.1rem;
+	quotes:"【""】";
+}
+.recipe h3::before {
+	content:open-quote;
+}
+.recipe h3::after {
+	content:close-quote;
+}
+.more_recipe {
+	clear:both;
+}
+#sidebar dt {
+	float:left;
+	clear:both;
+}
+#sidebar dd {
+	float:left;
+	padding-left:20px;
+}
+}
+
+/* ここから、width:768px　以上に適用 */
+
+ @media (min-width:768px) {
+html {
+	font-size:14px;
+}
+#container {
+	max-width:720px;
+}
+nav ul {
+	padding:.5em 0;
+	border-top:double 1px #666;
+	border-bottom:dotted 1px #666;
+}
+nav ul li {
+	text-align:center;
+	border-right:dotted 1px #666;
+}
+.recipe figure {
+	float:none;
+	margin-left:0;
+}
+#sidebar dt {
+	float:none;
+}
+
+nav ul {
+	display:flex;
+}
+nav ul li {
+	flex:1 1 0;
+}
+.recipe figure {
+	margin-left:2em;
+	text-align:center;
+}
+.recipe figcaption {
+	font-size:0.75rem;
+}
+.recipe ol {
+	margin:0;
+	padding-left:60px;
+}
+.recipe ol li {
+ font-size:.875rem;
+	padding-bottom:.5em;
+}
+.recipe ol li:first-child {
+	list-style-image:url(../images/step1.png);
+}
+.recipe ol li:nth-child(2) {
+	list-style-image:url(../images/step2.png);
+}
+.recipe ol li:nth-child(3) {
+	list-style-image:url(../images/step3.png);
+}
+.recipe .flex {
+	display:flex;
+}
+.recipe .flex>* {
+	flex:1 1 0;
+}
+.recipe .flex>figure {
+	max-width:259px;
+}
+#mail {
+	display:block;
+	position:absolute;
+	top:10px;
+	right:15px;
+}
+#sidebar dl {
+	display:flex;
+	justify-content:space-between;
+}
+#sidebar dl>div {
+	width:208px;
+}
+}
+
+/* ここから、width:992px　以上に適用 */
+
+@media (min-width:992px) {
+#container {
+	max-width:960px;
+}
+#content.flex {
+	display:flex;
+}
+#main {
+	width:62%;
+	margin-right:4%;
+}
+#sidebar {
+	width:34%;
+	max-width:208px;
+}
+#content.flex>* {
+	flex:1 1 auto;
+}
+#sidebar dl {
+	display:block;
+}
+#sidebar dt {
+	float:none;
+}
+#sidebar dd {
+	float:none;
+	padding-left:0;
+ font-size:.875rem;
+}
+}
