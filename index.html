@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>今日のおすすめレシピ</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="recipe">
+<div id="container">
+  <header id="header">
+    <h1><a href="#"><img src="images/logo.png" alt="TODAY'S PASTA"></a></h1>
+  </header>
+  <input type="checkbox" id="nav_tab"><label for="nav_tab"><span id="nav_btn"></span></label>
+  <nav id="nav">
+    <ul>
+      <li><a href="#">TOP</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Recipe</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </nav>
+  <div id="content" class="flex">
+    <div id="main">
+      <article class="recipe">
+        <h1>Recipe<span>今日のおすすめレシピ</span></h1>
+        <section id="pasta">
+          <h2>バジルとトマトのパスタ</h2>
+          <div class="flex clearfix">
+            <p>このパスタはバジルの風味がポイントなので、バジルはたっぷり用意しましょう。トマトは3個使います。ちょっと多いんじゃない？と思うかもしれませんが、トマトは煮込んでいるうちにどんどんカサが減っていきます。中型のトマト3個くらいでちょうどいいのでご安心を！<br>
+              なお、煮込みすぎるとソースがなくなってしまいます。鍋を火にかけすぎないよう注意してくださいね。下処理で<strong>トマトの種をキレイに取っておくと、酸味が減ってまろやかな味わいになります。</strong></p>
+            <figure><img src="images/picture.png" alt="バジルとトマトのパスタ">
+              <figcaption>
+                <p>バジルが薫るおいしいパスタです。</p>
+              </figcaption>
+            </figure>
+          </div>
+          <h3>つくり方</h3>
+          <ol>
+            <li>トマトを1cm角にカットし、フライパンにオリーブオイルをひいてニンニクを入れ、火をつけます。</li>
+            <li> ニンニクに色が付いてきたら、カットしたトマトを入れ、中火で10分ほど煮込みます。</li>
+            <li> 茹であがったパスタを皿に盛り、トマトソースをかけて、バジルをちぎってちらします。 </li>
+          </ol>
+        </section>
+      </article>
+      <aside id="more_recipe">
+        <h2>もっとくわしいレシピを知りたい</h2>
+        <p>もっとくわしいレシピを無料でダウンロードできます！
+          メールマガジンにお申込みいただくと、ダウンロードページのURLが書いてあるメールが届きます。メールマガジンには旬の食材や季節のレシピなど、おいしい情報が 満 載 です。</p>
+      </aside>
+    </div>
+    <aside id="sidebar">
+      <form>
+        <p class="underline">レシピ検索</p>
+        <input type="search" name="search" id="serch">
+        <input type="submit" value="検索">
+      </form>
+      <form>
+        <p class="underline">メールマガジン申込み</p>
+        <input type="text" name="text" id="text" placeholder="お名前">
+        <br>
+        <input type="mail" name="form_mail" id="form_mail" placeholder="メールアドレス">
+        <br>
+        <input class="submit" type="submit" value="送信">
+      </form>
+      <section>
+        <h3>TODAY'Sシリーズ</h3>
+        <dl>
+          <div> <a href="#">
+            <dt id="salad"><img src="images/salad.png" alt="TODAY'S SALAD"></dt>
+            <dd>旬の野菜を使ったおいしいサラダのレシピ</dd>
+            </a></div>
+          <div> <a href="#">
+            <dt id="sweets"><img src="images/sweets.png" alt="TODAY'S SWEETS"></dt>
+            <dd>有名パティシエが、とっておきのレシピを伝授します</dd>
+            </a></div>
+          <div> <a href="#">
+            <dt id="drink"><img src="images/drink.png" alt="TODAY'S DRINK"></dt>
+            <dd>手軽にほっこり、ドリンクのレシピ</dd>
+            </a></div>
+        </dl>
+      </section>
+    </aside>
+  </div>
+  <footer id="footer"><small>&copy; 2017 TODAY's Recipe</small><span id="mail"><a href="#"><img src="images/mail.png" alt="mail"></a></span></footer>
+</div>
+</body>
+</html>
